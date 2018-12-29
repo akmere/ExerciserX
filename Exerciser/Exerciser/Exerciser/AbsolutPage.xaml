@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exerciser.AbsolutPage">
+    <AbsoluteLayout HorizontalOptions="Center" VerticalOptions="Center"
+                    >
+        <Label Text="Hehe" HorizontalOptions="End"/>
+        <Label Text="Hehe2fgdgfd" 
+               WidthRequest="150"
+               AbsoluteLayout.LayoutBounds=".2,.2, .2, .2"
+               AbsoluteLayout.LayoutFlags="All"
+               />
+    </AbsoluteLayout>
+</ContentPage>

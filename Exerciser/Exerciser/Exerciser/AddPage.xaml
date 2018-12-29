@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exerciser.AddPage"
+             x:Name="AddPage">
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="5">
+        <Label Text="Name"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+        <Entry HorizontalOptions="Center"
+               WidthRequest="150"
+               Completed="nameEntry_Completed"
+               x:Name="nameEntry"/>
+        <Label Text="Value"
+               FontSize="Large"               
+               HorizontalOptions="Center"/>
+        <Entry HorizontalOptions="Center"
+               WidthRequest="150"
+               x:Name="valueEntry"
+               Completed="valueEntry_Completed"
+               Keyboard="Telephone"/>
+        <Button FontSize="Large"
+                Text="Confirm"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+        <Button FontSize="Large"
+                Text="Cancel"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked_1"
+                />
+
+    </StackLayout>
+</ContentPage>

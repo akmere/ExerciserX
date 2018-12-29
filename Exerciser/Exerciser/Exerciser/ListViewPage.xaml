@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exerciser.ListViewPage"
+             x:Name="LVP"
+             Title="Exerciser"
+             
+             >
+    <StackLayout Orientation="Vertical" Spacing="0">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+            <Button Text="&lt;" HorizontalOptions="Center" Command="{Binding Path=BindingContext.PreviousCommand, Source={x:Reference LVP}}"/>
+            <Label x:Name="label1"
+               HorizontalOptions="Center"
+               FontSize="30"
+               TextColor="DarkRed"
+                   WidthRequest="170"
+                   HeightRequest="1"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text=">"
+                    HorizontalOptions="Center"
+                    Command="{Binding Path=BindingContext.NextCommand, Source={x:Reference LVP}}"/>
+        </StackLayout>
+            <ListView ItemsSource="{Binding Exercises}"
+            ItemTapped="Handle_ItemTapped"
+
+                      
+                      
+            CachingStrategy="RecycleElement"
+                  x:Name="Pagunia"
+                  HeightRequest="300">
+
+
+                <!--Built in Cells-->
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem  Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference Pagunia}}" CommandParameter="{Binding Name}" Text="Edit"/>
+                            <MenuItem  Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Pagunia}}" CommandParameter="{Binding Name}" Text="Delete"/>
+                            
+                        </ViewCell.ContextActions>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="{Binding Name}"
+                               Style="{DynamicResource ListItemDetailTextStyle}"
+                               VerticalOptions="Center"
+                               Margin="5,0,0,0"
+                               WidthRequest="120"
+                               HorizontalTextAlignment="Center"
+                               TextColor="DarkGoldenrod"
+                               FontSize="Large"                                   
+                               />
+                            <Button Text="&lt;"
+                                Margin="0,0,0,0"
+                                x:Name="ButtonLess"
+                                Command="{Binding Path=BindingContext.LessCommand, Source={x:Reference Pagunia}}"
+                                CommandParameter="{Binding Name}"
+                                    WidthRequest="120"/>
+                            <Label Text="{Binding Repetitions}"
+                               Style="{DynamicResource ListItemDetailTextStyle}"
+                               VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                               WidthRequest="60"
+                               TextColor="DarkBlue"
+                               FontSize="Large" />
+                               
+                            <Button Text=">"
+                                x:Name="ButtonMore"
+                                Command="{Binding Path=BindingContext.MoreCommand, Source={x:Reference Pagunia}}"
+                                CommandParameter="{Binding Name}"
+                                    WidthRequest="120"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <!--Custom View Cells-->
+    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+  </ListView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+            <Label Margin="140,0,0,0" FontSize="Large" WidthRequest="80" Text="Score: " TextColor="DarkRed" HorizontalTextAlignment="End"/>
+            <Label x:Name="scoreLabel" HorizontalTextAlignment="Start"  FontSize="Large" TextColor="DarkRed" Text="0"/>
+        </StackLayout>
+        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Start" >
+            <Label Margin="140,0,0,0" FontSize="Large" WidthRequest="80" Text="Weight: " TextColor="DarkRed" HorizontalTextAlignment="End"/>
+            <Label x:Name="weightLabel" HorizontalTextAlignment="Start"  FontSize="Large" TextColor="DarkRed" Text="0"/>
+        </StackLayout>-->
+               
+        
+        <Button Text="Add" FontSize="Large"
+                 Command="{Binding Path=BindingContext.AddCommand, Source={x:Reference Pagunia}}"/>
+        <Button Text="Save" FontSize="Large"
+                Command="{Binding Path=BindingContext.SaveCommand, Source={x:Reference Pagunia}}"/>
+</StackLayout>
+</ContentPage>

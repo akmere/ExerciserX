@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Exerciser"
+             x:Class="Exerciser.MainPage">
+
+    <StackLayout VerticalOptions="Fill"
+                 HorizontalOptions="Fill">
+        <Label Text="Front Pull-ups" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="&lt;" />
+            <Button Text=">"/>
+        </StackLayout>
+        <Label Text="Rear Pull-ups" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="&lt;" />
+            <Button Text=">"/>
+        </StackLayout>
+        <Label Text="Push=ups" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand">
+            <Button Text="&lt;"
+                    HorizontalOptions="Center"/>
+            <Label Text="0"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"/>
+            <Button Text=">"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </StackLayout>
+	
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exerciser.GridPage"
+             xmlns:local="clr-namespace:Exerciser">
+    <Grid ColumnSpacing="0"
+          RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Text="Hehe"/>
+        <!--<BoxView Grid.Column="0" Grid.Row="0" BackgroundColor="Red" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>-->
+        <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="Yellow" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="2" Grid.Row="0" BackgroundColor="Pink" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="0" Grid.Row="1" BackgroundColor="Aquamarine" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="1" Grid.Row="1" BackgroundColor="Aqua" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="2" Grid.Row="1" BackgroundColor="Beige" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="0" Grid.Row="2" BackgroundColor="Bisque" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="1" Grid.Row="2" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Column="2" Grid.Row="2" BackgroundColor="BlanchedAlmond" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+    </Grid>
+
+</ContentPage>

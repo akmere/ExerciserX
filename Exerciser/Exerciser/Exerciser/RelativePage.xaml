@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exerciser.RelativePage">
+    <RelativeLayout>
+        <Label Text="This is relative layout" 
+               x:Name="label1"
+            />
+        <Label Text="This is Label2"
+               x:Name="label2"
+               />
+        <Label Text="This is Label3"
+               x:Name="label3"/>
+    </RelativeLayout>
+</ContentPage>
